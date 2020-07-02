@@ -2,8 +2,8 @@
 <html class="page" lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <title>Магазин по продаже мороженного Глейси</title>
+  <meta charset="UTF-8">
+  <title>Каталог магазина мороженного Глейси - сливочное</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,12 +11,12 @@
 <body class="page-body">
   <header class="main-header container">
     <nav class="main-header-nav">
-      <a class="main-header-logo">
+      <a class="main-header-logo" href="index.html">
         <img src="img/header-logo.svg" alt="Логотип Глейси" width="154" height="64">
       </a>
       <ul class="site-navigation">
         <li class="site-navigation-item">
-          <a class="site-navigation-link" href="#">Каталог</a>
+          <a class="site-navigation-link site-navigation-link-current" href="#">Каталог</a>
           <ul class="catalog-menu">
             <li class="catalog-menu-item">
               <a class="catalog-menu-link catalog-menu-link-news" href="#">Новинки</a>
@@ -87,36 +87,45 @@
             </div>
           </form>
         </li>
-        <li class="user-navigation-item">
-          <a class="user-navigation-link user-navigation-link-cart" href="#">
+        <li class="user-navigation-item user-navigation-item-cart-added">
+          <a class="user-navigation-link user-navigation-link-cart cart-added" href="#">
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
-                fill="white" />
               <path
                 d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z"
                 fill="white" />
               <path
                 d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z"
                 fill="white" />
+              <path
+                d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z"
+                fill="white" />
+              <path d="M5.93506 4.03003L6.97297 13H17.5032L18.6923 4.03003H5.93506Z" fill="none" />
             </svg>
-            Пусто
+            2 товара
           </a>
           <div class="user-navigation-cart">
             <ul class="user-navigation-cart-list">
               <li class="user-navigation-cart-item">
+                <button class="button-cart-item-remove" type="button" aria-label="убрать товар из корзины"></button>
+                <img class="user-nav-cart-item-img" src="img/cart-preview-img-1.jpg" alt="Фотография мороженного"
+                  width="33" height="33">
                 <p class="user-nav-cart-item-name">Пломбир с апельсиновым джемом</p>
                 <p class="user-nav-cart-item-amount">1,5 кг х <span class="amount-price">200 руб.</span></p>
                 <p class="user-nav-cart-item-price">300 руб.</p>
               </li>
               <li class="user-navigation-cart-item">
+                <button class="button-cart-item-remove" type="button" aria-label="убрать товар из корзины"></button>
+                <img class="user-nav-cart-item-img" src="img/cart-preview-img-2.jpg" alt="Фотография мороженного"
+                  width="33" height="33">
                 <p class="user-nav-cart-item-name">Клубничный пломбир с присыпкой из белого шоколада</p>
                 <p class="user-nav-cart-item-amount">1,5 кг х <span class="amount-price">300 руб.</span></p>
                 <p class="user-nav-cart-item-price">450 руб.</p>
               </li>
             </ul>
-            <p class="user-navigation-cart-total">Итого: <span>750 руб.</span></p>
-            <a class="button" href="#">Оформить заказ</a>
+            <div class="user-navigation-cart-controls">
+              <p class="user-navigation-cart-total">Итого: <span>750 руб.</span></p>
+              <a class="button button-cart" href="#">Оформить заказ</a>
+            </div>
           </div>
         </li>
       </ul>
@@ -127,153 +136,200 @@
       <a class="main-header-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a>
     </section>
   </header>
-  <main>
-    <h1 class="visually-hidden">Магазин по продаже мороженного Глейси</h1>
-    <section class="promo container">
-      <h2 class="visually-hidden">Промо-предложения</h2>
-      <div class="promo-slider">
-        <ul class="slider-list">
-          <li class="slider-item slider-item-current">
-            <div class="slider-item-photos">
-              <img class="photo-left" src="img/promo-slide-1-item-1.png" alt="Фотография мороженного" width="372"
-                height="584">
-              <img class="photo-right" src="img/promo-slide-1-item-2.png" alt="Фотография мороженного" width="333"
-                height="519">
+  <main class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="№">Каталог</a>
+      </li>
+      <li class="breadcrumbs-item">Сливочное</li>
+    </ul>
+    <h1 class="page-catalog-title">Сливочное мороженное</h1>
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="GET">
+        <fieldset class="filter-group">
+          <legend class="filter-group-name">Сортировка:</legend>
+          <select class="filter-select" name="sort" id="filter-sort">
+            <option class="filter-select-option" value="popular">по популярности</option>
+            <option class="filter-select-option" value="inexpensive">сначала недорогие</option>
+            <option class="filter-select-option" value="expensive">сначала дорогие</option>
+            <option class="filter-select-option" value="fat">по жирности</option>
+          </select>
+        </fieldset>
+        <fieldset class="filter-group">
+          <h3 class="filter-group-name filter-group-name-price">Цена:</h3>
+          <label class="min-price">
+            <input class="input-range-number" type="number" name="min-price" value="100"> ₽ -
+          </label>
+          <label class="max-price">
+            <input class="input-range-number" type="number" name="max-price" value="500"> ₽
+          </label>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
             </div>
-            <h3 class="slider-item-title">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a class="button button-promo" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item">
-            <div class="slider-item-photos">
-              <img class="photo-left" src="img/promo-slide-2-item-1.png" alt="Фотография мороженного" width="375"
-                height="582">
-              <img class="photo-right" src="img/promo-slide-2-item-2.png" alt="Фотография мороженного" width="338"
-                height="523">
-            </div>
-            <h3 class="slider-item-title">Шоколадный пломбир и лимонный сорбет</h3>
-            <a class="button button-promo" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item">
-            <div class="slider-item-photos">
-              <img class="photo-left" src="img/promo-slide-3-item-1.png" alt="Фотография мороженного" width="367"
-                height="582">
-              <img class="photo-right" src="img/promo-slide-3-item-2.png" alt="Фотография мороженного" width="326"
-                height="523">
-            </div>
-            <h3 class="slider-item-title">Пломбир с помадкой и клубничный щербет</h3>
-            <a class="button button-promo" href="#">Давайте оба!</a>
-          </li>
-        </ul>
-        <div class="slider-controls">
-          <button class="slider-controls-btn slider-controls-btn-current" type="button"
-            aria-label="Первый слайд"></button>
-          <button class="slider-controls-btn" type="button" aria-label="Второй слайд"></button>
-          <button class="slider-controls-btn" type="button" aria-label="Третий слайд"></button>
-        </div>
-      </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend class="filter-group-name">Жирность:</legend>
+          <ul class="filter-group-list">
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="radio" name="fat" value="0">
+                0%
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="radio" name="fat" value="10-minus" checked>
+                до 10%
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="radio" name="fat" value="30-minus">
+                до 30%
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="radio" name="fat" value="30-plus">
+                выше 30%
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend class="filter-group-name">Наполнители:</legend>
+          <ul class="filter-group-list">
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="checkbox" name="chocolate" checked>
+                шоколадные
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="checkbox" name="sugar" checked>
+                сахарные присыпки
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="checkbox" name="fruit">
+                фрукты
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="checkbox" name="syrup">
+                сиропы
+              </label>
+            </li>
+            <li class="filter-group-item">
+              <label class="filter-option">
+                <input class="visually-hidden" type="checkbox" name="jam">
+                джемы
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters-button" type="submit">Применить</button>
+      </form>
     </section>
-    <section class="advertisement container">
-      <h2 class="visually-hidden">Акционное предложение</h2>
-      <ul class="advertisement-list">
-        <li class="advertisement-item">
-          <h3 class="advertisement-item-title">Малинка даром!</h3>
-          <p class="advertisement-item-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
-            малинового варенья бесплатно.</p>
-          <a class="button button-advertisement" href="#">Хочу варенье!</a>
-        </li>
-        <li class="advertisement-item">
-          <h3 class="advertisement-item-title">Шоколадки даром!</h3>
-          <p class="advertisement-item-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
-            шоколадной присыпки совершенно
-            бесплатно.</p>
-          <a class="button button-advertisement" href="#">Хочу шоколадки!</a>
-        </li>
-      </ul>
-    </section>
-    <section class="bestsellers container">
-      <h2 class="visually-hidden">Хиты</h2>
+    <section class="catalog">
+      <h2 class="visually-hidden">Список товаров</h2>
       <ul class="catalog-list">
-        <li class="catalog-item bestsellers-item">
-          <img src="img/bestseller-1.png" alt="Фотография мороженного" width="267" height="267">
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-1.jpg" alt="Фотография мороженного" width="267"
+            height="267">
           <p class="catalog-item-price"><span>310 ₽</span>/кг</p>
           <h3 class="catalog-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           <a class="button button-catalog" href="#">Быстрый просмотр</a>
         </li>
-        <li class="catalog-item bestsellers-item">
-          <img src="img/bestseller-2.png" alt="Фотография мороженного" width="267" height="267">
-          <p class="catalog-item-price"><span>380 ₽</span>/кг</p>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-2.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>380 ₽ ₽</span>/кг</p>
           <h3 class="catalog-item-title">Сливочно-кофейное с кусочками</h3>
           <a class="button button-catalog" href="#">Быстрый просмотр</a>
         </li>
-        <li class="catalog-item bestsellers-item">
-          <img src="img/bestseller-3.png" alt="Фотография мороженного" width="267" height="267">
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-3.jpg" alt="Фотография мороженного" width="267"
+            height="267">
           <p class="catalog-item-price"><span>355 ₽</span>/кг</p>
           <h3 class="catalog-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
           <a class="button button-catalog" href="#">Быстрый просмотр</a>
         </li>
-        <li class="catalog-item bestsellers-item">
-          <img src="img/bestseller-4.png" alt="Фотография мороженного" width="267" height="267">
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-4.jpg" alt="Фотография мороженного" width="267"
+            height="267">
           <p class="catalog-item-price"><span>415 ₽</span>/кг</p>
           <h3 class="catalog-item-title">Сливочное крем-брюле с карамельной подливкой </h3>
           <a class="button button-catalog" href="#">Быстрый просмотр</a>
         </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-5.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>325 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочное с брусничным джемом</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-6.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>410 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочно-черничное с цельными ягодами черники</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-7.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>315 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочно-лимонное с карамельной присыпкой</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-8.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>320 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочное с шоколадной стружкой</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-9.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>440 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочно-ванильное с кусочками шоколада</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-10.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>435 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочноe с ментоловым сиропом</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-11.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>355 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочное с кусочками черного шоколада</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
+        <li class="catalog-item">
+          <img class="catalog-item-img" src="img/catalog-item-12.jpg" alt="Фотография мороженного" width="267"
+            height="267">
+          <p class="catalog-item-price"><span>420 ₽</span>/кг</p>
+          <h3 class="catalog-item-title">Сливочное с мятным сиропом</h3>
+          <a class="button button-catalog" href="#">Быстрый просмотр</a>
+        </li>
       </ul>
-    </section>
-    <section class="info container">
-      <h2 class="info-title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного<br>
-        производства на развес</h2>
-      <div class="info-group">
-        <p class="info-text info-production">Все наше мороженое изготавливается на собственном производстве, с
-          использованием современного оборудования и
-          проверенных временем технологий.</p>
-        <p class="info-text info-purchase">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
-          компаний, с которыми нас
-          связывает долговременное сотрудничество.</p>
-      </div>
-      <div class="info-group">
-        <p class="info-text info-eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
-          качества. Все дополнительные
-          ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        <p class="info-text info-termo">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
-          который не дает мороженому
-          растаять в пути и позволяет сохранить превосходный вкус.</p>
-      </div>
-    </section>
-    <div class="index-columns container">
-      <article class="blog-item">
-        <h2 class="blog-item-subtitle">Новое в нашем блоге</h2>
-        <h3 class="blog-item-title"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
-      </article>
-      <section class="subscription">
-        <h2 class="visually-hidden">Форма подписки на рассылку</h2>
-        <div class="subscription-inner">
-          <p class="subscription-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого
-            вкусного, что у нас происходит.
-            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="subscription-email">Введите ваш E-mail</label>
-            <input class="subscription-input-email" type="email" id="subscription-email" name="user-email"
-              placeholder="email@example.com">
-            <button class="button button-subscription" type="submit">Отправить</button>
-          </form>
-        </div>
-      </section>
-    </div>
-    <section class="contacts">
-      <h2 class="visually-hidden">Адрес и телефон компании</h2>
-      <div class="contacts-map">
-        <img class="contacts-map-img" src="img/map.png" alt="Расположение компании на карте" width="1200" height="430">
-      </div>
-      <div class="container">
-        <div class="contacts-card">
-          <p class="contacts-card-address-name">Адрес главного офиса и офлайн-магазина:</p>
-          <b class="contacts-card-address-value">ул. Большая Конюшенная, 19/8, Санкт-Петербург</b>
-          <p class="contacts-card-tel-name">Для заказов по телефону:</p>
-          <b class="contacts-card-tel-value"><a href="tel:+78124502525">8 812 450-25-25</a></b>
-          <p class="contacts-card-worktime">(с 10 до 20 ежедневно)</p>
-          <button class="button button-contacts-card" type="button">Форма обратной связи</button>
-        </div>
-      </div>
     </section>
   </main>
   <footer class="main-footer container">
