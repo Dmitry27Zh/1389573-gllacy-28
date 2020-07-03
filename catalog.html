@@ -150,96 +150,85 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filter" action="https://echo.htmlacademy.ru/" method="GET">
-        <fieldset class="filter-group">
-          <legend class="filter-group-name">Сортировка:</legend>
-          <select class="filter-select" name="sort" id="filter-sort">
-            <option class="filter-select-option" value="popular">по популярности</option>
-            <option class="filter-select-option" value="inexpensive">сначала недорогие</option>
-            <option class="filter-select-option" value="expensive">сначала дорогие</option>
-            <option class="filter-select-option" value="fat">по жирности</option>
-          </select>
-        </fieldset>
-        <fieldset class="filter-group">
-          <h3 class="filter-group-name filter-group-name-price">Цена:</h3>
-          <label class="min-price">
-            <input class="input-range-number" type="number" name="min-price" value="100"> ₽ -
-          </label>
-          <label class="max-price">
-            <input class="input-range-number" type="number" name="max-price" value="500"> ₽
-          </label>
-          <div class="range-controls">
-            <div class="scale">
-              <div class="bar"></div>
+        <div class="filter-row-1">
+          <fieldset class="filter-group">
+            <legend class="filter-group-name">Сортировка:</legend>
+            <select class="filter-select" name="sort" id="filter-sort">
+              <option class="filter-select-option" value="popular">по популярности</option>
+              <option class="filter-select-option" value="inexpensive">сначала недорогие</option>
+              <option class="filter-select-option" value="expensive">сначала дорогие</option>
+              <option class="filter-select-option" value="fat">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class="filter-group">
+            <h3 class="filter-group-name filter-group-name-price">Цена:</h3>
+            <label class="min-price">
+              <input class="input-range-number" type="number" name="min-price" value="100"> ₽ -
+            </label>
+            <label class="max-price">
+              <input class="input-range-number" type="number" name="max-price" value="500"> ₽
+            </label>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
             </div>
-            <div class="toggle toggle-min"></div>
-            <div class="toggle toggle-max"></div>
-          </div>
-        </fieldset>
-        <fieldset class="filter-group">
-          <legend class="filter-group-name">Жирность:</legend>
-          <ul class="filter-group-list">
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="radio" name="fat" value="0">
-                0%
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="radio" name="fat" value="10-minus" checked>
-                до 10%
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="radio" name="fat" value="30-minus">
-                до 30%
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="radio" name="fat" value="30-plus">
-                выше 30%
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filter-group">
-          <legend class="filter-group-name">Наполнители:</legend>
-          <ul class="filter-group-list">
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="checkbox" name="chocolate" checked>
-                шоколадные
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="checkbox" name="sugar" checked>
-                сахарные присыпки
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="checkbox" name="fruit">
-                фрукты
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="checkbox" name="syrup">
-                сиропы
-              </label>
-            </li>
-            <li class="filter-group-item">
-              <label class="filter-option">
-                <input class="visually-hidden" type="checkbox" name="jam">
-                джемы
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="filters-button" type="submit">Применить</button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-group-name">Жирность:</legend>
+            <ul class="filter-group-list">
+              <li class="filter-group-item">
+                <input class="visually-hidden filter-option-input" id="fat-0" type="radio" name="fat" value="0">
+                <label class="filter-option filter-option-radio" for="fat-0">0%</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden filter-option-input" id="fat-10" type="radio" name="fat" value="10-minus"
+                  checked>
+                <label class="filter-option filter-option-radio" for="fat-10">до 10%</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden filter-option-input" type="radio" id="fat-30" name="fat" value="30-minus">
+                <label class="filter-option filter-option-radio" for="fat-30">до 30%</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden filter-option-input" id="fat-30-plus" type="radio" name="fat"
+                  value="30-plus">
+                <label class="filter-option filter-option-radio" for="fat-30-plus">выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="filter-row-2">
+          <fieldset class="filter-group">
+            <legend class="filter-group-name">Наполнители:</legend>
+            <ul class="filter-group-list">
+              <li class="filter-group-item">
+                <input class="visually-hidden input-checkbox" id="checkbox-chocolate" type="checkbox" name="chocolate"
+                  checked>
+                <label class="filter-option filter-option-checkbox" for="checkbox-chocolate">шоколадные</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden input-checkbox" id="checkbox-sugar" type="checkbox" name="sugar" checked>
+                <label class="filter-option filter-option-checkbox" for="checkbox-sugar">сахарные присыпки</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden input-checkbox" id="checkbox-fruit" type="checkbox" name="fruit">
+                <label class="filter-option filter-option-checkbox" for="checkbox-fruit">фрукты</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden input-checkbox" id="checkbox-syrup" type="checkbox" name="syrup">
+                <label class="filter-option filter-option-checkbox" for="checkbox-syrup">сиропы</label>
+              </li>
+              <li class="filter-group-item">
+                <input class="visually-hidden input-checkbox" id="checkbox-jam" type="checkbox" name="jam">
+                <label class="filter-option filter-option-checkbox" for="checkbox-jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filters-button" type="submit">Применить</button>
+        </div>
       </form>
     </section>
     <section class="catalog">
