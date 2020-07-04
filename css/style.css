@@ -97,7 +97,8 @@ a {
 .social-list,
 .service-info-list,
 .breadcrumbs,
-.filter-group-list {
+.filter-group-list,
+.catalog-pagination {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -664,8 +665,8 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
 }
 
-.slider-controls-btn:hover,
-.slider-controls-btn:focus {
+.slider-controls-btn:not(.slider-controls-btn-current):hover,
+.slider-controls-btn:not(.slider-controls-btn-current):focus {
   background-color: var(--white-opacity-40);
 }
 
@@ -1140,14 +1141,30 @@ input[type="radio"].visually-hidden {
   appearance: none;
 }
 
+.filter-select-option {
+  position: relative;
+}
+
+.filter-select-arrow {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+}
+
 .filter-select:hover,
 .filter-select:focus {
   color: var(--basic-dark-gray);
 }
 
+.filter-select:hover + .filter-select-arrow .filter-select-arrow-path,
+.filter-select:focus + .filter-select-arrow .filter-select-arrow-path {
+  fill: var(--basic-dark-gray);
+}
+
 .filter-group {
   border: none;
   padding: 0;
+  position: relative;
 }
 
 /* Range controls */
@@ -1328,9 +1345,74 @@ input[type="radio"].visually-hidden {
 /* Catalog */
 
 .catalog {
+  position: relative;
   margin-top: 40px;
   padding-bottom: 135px;
   border-bottom: 1px solid var(--white-opacity-20);
+}
+
+/* Catalog pagination */
+
+.catalog-pagination {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 29px;
+}
+
+.catalog-pagination-item {
+  margin-right: 4px;
+}
+
+.catalog-pagination-item-prev {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-pagination-item-next {
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-pagination-link {
+  padding: 4px 9px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--basic-white);
+  border-radius: 50%;
+}
+
+.catalog-pagination-link:hover,
+.catalog-pagination-link:focus {
+  background-color: var(--white-opacity-20);
+}
+
+.catalog-pagination-item-current .catalog-pagination-link {
+  background-color: var(--basic-white);
+  color: var(--basic-dark-gray);
+}
+
+.catalog-pagination-link-prev,
+.catalog-pagination-link-next {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid var(--basic-white);
+  border-bottom: 1px solid var(--basic-white);
+}
+
+.catalog-pagination-link-prev {
+  border-color: var(--white-opacity-20);
+  transform: rotate(45deg);
+}
+
+.catalog-pagination-link-next {
+  transform: rotate(225deg);
 }
 
 /* Main footer */
