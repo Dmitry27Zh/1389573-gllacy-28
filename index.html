@@ -271,7 +271,7 @@
           <p class="contacts-card-tel-name">Для заказов по телефону:</p>
           <b class="contacts-card-tel-value"><a href="tel:+78124502525">8 812 450-25-25</a></b>
           <p class="contacts-card-worktime">(с 10 до 20 ежедневно)</p>
-          <button class="button button-contacts-card" type="button">Форма обратной связи</button>
+          <button class="button button-feedback" type="button">Форма обратной связи</button>
         </div>
       </div>
     </section>
@@ -359,6 +359,20 @@
       <p class="footer-copyright-text">Сделано в HTML Academy &copy; 2019</p>
     </section>
   </footer>
+  <section class="modal modal-feedback">
+    <h2 class="modal-feedback-title">Мы обязательно вам ответим!</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="POST">
+      <label class="visually-hidden" for="feedback-user-name">Введите ваше имя и фамилию:</label>
+      <input class="feedback-input-name" type="text" id="feedback-user-name" name="user-name" placeholder="Имя Фамилия">
+      <label class="visually-hidden" for="feedback-user-email">Введите ваш email:</label>
+      <input class="feedback-input-email" type="email" id="feedback-user-email" name="user-email" placeholder="email@example.com">
+      <label class="visually-hidden" for="feedback-user-message">Введите ваше сообщение:</label>
+      <textarea class="feedback-textarea" id="feedback-user-message" name="user-message">В свободной форме</textarea>
+      <button class="button button-feedback-form" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть попап"></button>
+  </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
